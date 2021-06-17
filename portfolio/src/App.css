@@ -1,0 +1,517 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0px;
+}
+
+.homeContainer {
+  /* background-color: lightblue; */
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.presentationText-container {
+  width: 58%;
+  /* height: 29vh; */
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.presentationText {
+  font-size: 52px;
+  font-family: 'Montserrat';
+  /* font-family: 'Montserrat', sans-serif; */
+  color: rgb(39,35,65);
+  font-weight: bold;
+}
+
+.coloredText {
+  background-image: linear-gradient(135deg,#188b8f,#00cdac);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.verMas-button{
+  margin-top: 30px;
+  border: 2px solid lightseagreen;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 180px;
+  position: relative;
+}
+
+.verMasInactivo {
+  position: absolute;
+  left: 0px;
+  width: 0px;
+  height: 42px;
+  transition: all .4s cubic-bezier(.19,1,.22,1);
+  background-image: linear-gradient(135deg,#188b8f,#00cdac);
+  border-bottom: 2px solid lightseagreen;
+}
+
+.verMasActivo {
+  color: white;
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid lightseagreen;
+  background-image: linear-gradient(135deg,#188b8f,#00cdac);
+  position: absolute;
+  left: 0px;
+  transition: all .35s cubic-bezier(.19,1,.22,1);
+}
+
+
+.verMasTextActivo {
+  font-size: 22px;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  z-index: 1;
+  font-weight: 700;
+}
+
+.verMasTextInactivo {
+  font-size: 22px;
+  font-family: 'Montserrat', sans-serif;
+  color: lightseagreen;
+  z-index: 1;
+  font-weight: 700 ;
+}
+
+
+/* About Me Section */
+
+
+.aboutMe-container {
+  /* background-color: lightseagreen; */
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(135deg,#188b8f,#00cdac);
+}
+
+.aboutMe-content-container {
+  width: 65%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 1px solid black; */
+}
+
+.aboutMe-title {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.imageAndText-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.personalImage-container {
+  width: 250px;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.aboutMe-text-container {
+  width: 800px;
+}
+
+.aboutMe-description {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 23px;
+  text-align: justify;
+}
+/* 
+margin-top: 30px;
+border: 2px solid lightseagreen;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative; */
+
+.curriculumButton {
+  position: relative;
+  width: 140px;
+  height: 35px;
+  border: 2px solid white;
+  /* margin-top: 5px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start; 
+}
+
+.curriculumButton:hover{
+  cursor: pointer;
+}
+
+.cvButton-active { 
+  color: white;
+  width: 100%;
+  height: 100%;
+  /* border-bottom: 2px solid lightseagreen; */
+  /* background-image: linear-gradient(135deg,#188b8f,#00cdac); */
+  background-color: white;
+  position: absolute;
+  left: 0px;
+  /* border: 2px solid seagreen; */
+  transition: all .6s cubic-bezier(.19,1,.22,1);
+}
+
+.cvButton-inactive{
+  position: absolute;
+  left: 0px;
+  width: 0px;
+  height: 100%;
+  /* height: 42px; */
+  transition: all .6s cubic-bezier(.19,1,.22,1);
+  background-color: white;
+  /* border-bottom: 2px solid lightseagreen; */
+}
+
+.cvButtonText-active {
+  text-decoration: none;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  color: lightseagreen;
+  z-index: 1;
+  font-weight: 700;
+}
+
+.cvButtonText-inactive {
+  text-decoration: none;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  z-index: 1;
+  font-weight: 700 ;
+}
+
+
+
+
+
+
+
+
+
+/* Skills Section */
+
+
+
+.skillsSection-Container {
+  width: 100%;
+  background-color: rgb(235,238,238);
+  /* background-color: black; */
+  /* margin-top: 20px; */
+  padding-top: 10vh;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skillsTitle {
+  /* color: white; */
+  /* border-bottom: 3px solid white; */
+  border-bottom: 3px solid black;
+  font-size: 30px;
+  font-family: 'montserrat';
+  margin-top: 40px;
+}
+
+.skillsContainer {
+  width: 45%;
+  /* height: 80%; */
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 50px 0 40px 0;
+}
+
+.skillBox {
+  width: 32%;
+  margin-bottom: 25px;
+  height: 130px;
+  background-color: white;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.2);
+  /* background-color: black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconExample {
+  width: 60px;
+  height: 60px;
+  background-color: black;
+  /* background-color: white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+
+.githubIcon {
+  color: white;
+  font-size: 35px;
+}
+
+.tecnology {
+  font-family: "montserrat";
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: 500;
+  /* color: white; */
+}
+
+.blackDivisorLine {
+  width: 50%;
+  height: 1px;
+  margin: 0 auto;
+  background-color: black;
+}
+
+
+
+
+
+/* Proyects Section */
+
+.proyectsContainer {
+  padding-top: 60px;
+  width: 100%;
+  background-color: rgb(235,238,238);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.proyectsTitle {
+  font-family: 'montserrat';
+  font-size: 30px;
+  margin-bottom: 50px;
+  border-bottom: 3px solid black;
+}
+
+.proyectContainer {
+  width: 50%;
+  height: 300px;
+  /* border: 1px solid black; */
+  display: flex;
+  /* justify-content: space-between; */
+  margin-bottom: 120px;
+}
+
+
+.carrousel {
+  width: 45%;
+  height: 100%;
+  font-size: 30px;
+  box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.2);
+  transition: all .4s ease;
+}
+
+.carrousel:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 25px 15px rgba(0, 0, 0, 0.2);
+}
+
+.legend {
+  font-size: 30px;
+}
+
+.carrusel-image {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.proyectDescription-container{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* border: 1px solid black; */
+  margin-left: 40px;
+}
+
+.proyectTitle{
+  font-family: 'montserrat';
+  font-size: 25px;
+}
+
+.descriptionText-1 {
+  margin-top: 15px;
+  font-family: 'montserrat';
+  font-size: 17px;
+  text-align: justify;
+}
+
+.descriptionText-2 {
+  font-family: 'montserrat';
+  margin-top: 10px;
+  font-size: 17px;
+  text-align: justify;
+}
+
+.projectButton-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.projectButton {
+  /* margin-top: 30px; */
+  border: 2px solid lightseagreen;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 180px;
+  position: relative;
+}
+
+.projectButton:hover {
+  cursor: pointer;
+}
+
+.projectButton-Active {
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  transition: all .4s cubic-bezier(.19,1,.22,1);
+  background-image: linear-gradient(135deg,#188b8f,#00cdac);
+  border-bottom: 1px solid lightseagreen;
+}
+
+.projectButton-Inactive {
+  width: 0px;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  transition: all .4s cubic-bezier(.19,1,.22,1);
+  background-image: linear-gradient(135deg,#188b8f,#00cdac);
+  border-bottom: 1px solid lightseagreen;
+}
+
+.projectButtonText-active {
+  text-decoration: none;
+  font-family: 'montserrat';
+  color: white;
+  z-index: 1;
+  font-weight: 600;
+}
+
+.projectButtonText-inactive {
+  text-decoration: none;
+  /* font-size: 22px; */
+  font-family: 'Montserrat', sans-serif;
+  color: lightseagreen;
+  z-index: 1;
+  font-weight: 600 ;
+}
+
+/* footer */
+
+.footerContainer {
+  /* margin-top: 20vh; */
+  width: 100%;
+  height: 30vh;
+  background-color: rgb(51,51,51);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contentContainer{
+  width: 30%;
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.upArrow-icon {
+  font-size: 30px;
+  color: white;
+}
+
+.footerIcons-container {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: red; */
+  width: 100px;
+}
+
+.linkedin-icon {
+  font-size: 25px;
+  color: white;
+}
+
+.linkedin-icon:hover{
+  cursor: pointer;
+  color: rgb(199, 199, 199);
+  transition: all .2s ease;
+}
+
+.github-icon:hover{
+  cursor: pointer;
+  color: rgb(199, 199, 199);
+}
+
+.github-icon{
+  font-size: 25px;
+  color: white;
+  transition: all .2s ease;
+}
+
+.footerText {
+  border-top: 2px solid hsla(0,0%,100%,.1);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  color: rgb(102, 102, 102);
+}
+
+.heart-icon {
+  color: rgb(255, 45, 45);
+  font-size: 15px;
+  padding: 0 5px;
+}
