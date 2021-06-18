@@ -1,9 +1,10 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap'); */
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
 * {
-  margin: 0;
+  margin: 0px;
   padding: 0px;
 }
 
@@ -14,10 +15,91 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: lightblue;  
+  position: relative;
+  /* margin: -10px -10px; */
+  /* padding: 0px 0px; */
+  overflow: hidden;
 }
 
+.home-backgroundImage {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;  
+  position: absolute;
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+  padding: 10px 10px;
+  /* -webkit-backdrop-filter: blur(5px); */
+  /* backdrop-filter: blur(5px);   */
+}
+
+.home-ContentContainer {
+  /* width: 300px; */
+  /* height: 200px; */
+  /* background: lightblue; */
+  /* border: 1px solid black; */
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homeTitle{
+  color: white;
+  font-size: 90px;
+  /* font-family: 'Montserrat'; */
+  font-family: 'Open Sans', sans-serif;
+}
+
+.homeText-container{
+  /* width: 100%; */
+  /* background: green; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  line-height: 30px;
+}
+
+.homeText {
+  color: white;
+  font-size: 18px;
+  font-family: 'montserrat';
+}
+
+.home-divisorLine {
+  width: 75%;
+  height: 1px;
+  background:  rgb(179, 177, 177);
+  margin-top: 35px;
+  margin-bottom: 30px;
+  opacity: .2;
+}
+
+.homeIcons-container{
+  /* background: green; */
+  width: 90px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.homeIcon{ 
+  font-size: 28px;
+  color: white;
+}
+
+
+
+
+
+
 .presentationText-container {
-  width: 58%;
+  /* width: 58%; */
   /* height: 29vh; */
   /* border: 1px solid black; */
   display: flex;
@@ -30,7 +112,8 @@
   font-size: 52px;
   font-family: 'Montserrat';
   /* font-family: 'Montserrat', sans-serif; */
-  color: rgb(39,35,65);
+  /* color: rgb(39,35,65); */
+  color: white;
   font-weight: bold;
 }
 
@@ -97,7 +180,9 @@
 .aboutMe-container {
   /* background-color: lightseagreen; */
   width: 100%;
-  height: 60vh;
+  /* height: 60vh; */
+  padding-top: 40px;
+  padding-bottom: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,23 +204,36 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 35px;
   font-weight: bold;
+  margin-bottom: 30px;
 }
 
 .imageAndText-container {
+  /* background-color: green; */
+  /* height: 300px; */
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.personalImage-container {
-  width: 250px;
-  height: 100%;
+.personalImage-container{
+  display: flex;
+  flex-direction: column;
+  /* background: red; */
+}
+
+.personalImage {
+  /* width: 250px; */
+  width: 100%;
+  /* height: 100%; */
+  height: 300px;
   background-position: center;
   background-size: cover;
+  border-radius: 2px;
+  margin-bottom: 30px;
 }
 
 .aboutMe-text-container {
-  width: 800px;
+  width: 900px;
 }
 
 .aboutMe-description {
@@ -145,21 +243,14 @@
   font-size: 23px;
   text-align: justify;
 }
-/* 
-margin-top: 30px;
-border: 2px solid lightseagreen;
-cursor: pointer;
-display: flex;
-align-items: center;
-justify-content: center;
-position: relative; */
+
+
 
 .curriculumButton {
   position: relative;
-  width: 140px;
-  height: 35px;
+  width: 250px;
+  height: 45px;
   border: 2px solid white;
-  /* margin-top: 5px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -196,17 +287,27 @@ position: relative; */
 
 .cvButtonText-active {
   text-decoration: none;
-  font-size: 15px;
+  font-size: 18px;
   font-family: 'Montserrat', sans-serif;
   color: lightseagreen;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 1;
   font-weight: 700;
 }
 
 .cvButtonText-inactive {
   text-decoration: none;
-  font-size: 15px;
+  font-size: 18px;
   font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
   z-index: 1;
   font-weight: 700 ;
