@@ -187,6 +187,7 @@
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(135deg,#188b8f,#00cdac);
+  /* background-color: rgb(23,22,34); */
 }
 
 .aboutMe-content-container {
@@ -234,13 +235,14 @@
 
 .aboutMe-text-container {
   width: 900px;
+  margin-left: 40px;
 }
 
 .aboutMe-description {
   color: white;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
-  font-size: 23px;
+  font-size: 21px;
   text-align: justify;
 }
 
@@ -369,7 +371,7 @@
   align-items: center;
 }
 
-.iconExample {
+.iconContainer {
   width: 60px;
   height: 60px;
   background-color: black;
@@ -424,20 +426,28 @@
 
 .proyectContainer {
   width: 50%;
-  height: 300px;
+  /* height: 300px; */
   /* border: 1px solid black; */
   display: flex;
   /* justify-content: space-between; */
-  margin-bottom: 120px;
+  margin-bottom: 170px;
 }
 
+.carrouselContainer{
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  /* box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.2); */
+}
 
 .carrousel {
-  width: 45%;
-  height: 100%;
+  width: 100%;
+  /* width: 45%; */
+  height: 300px;
   font-size: 30px;
-  box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.2);
   transition: all .4s ease;
+  box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.2);
+
 }
 
 .carrousel:hover {
@@ -459,11 +469,11 @@
 
 .proyectDescription-container{
   width: 45%;
+  height: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  /* border: 1px solid black; */
   margin-left: 40px;
+  justify-content: space-between;
 }
 
 .proyectTitle{
@@ -471,23 +481,84 @@
   font-size: 25px;
 }
 
+.proyectDescription-subcontainer{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  /* justify-content: space-between; */
+}
+
 .descriptionText-1 {
-  margin-top: 15px;
+  margin-top: 10px;
   font-family: 'montserrat';
   font-size: 17px;
   text-align: justify;
 }
 
+.tecnologiesUsed-container {
+  /* display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap; */
+}
+
+.tecnologiesUsed-tittle{
+  font-size: 18px;
+  font-family: 'montserrat';
+  font-weight: bold;
+  text-decoration: underline;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.tecnologiesUsed-subContainer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.tecnology-box {
+  background: white;
+  width: 85px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
+}
+
+.proyects-iconContainer{
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  /* background-color: white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  /* margin-right: 10px; */
+}
+
+.marginBottom5 {
+  margin-bottom: 7px;
+}
+
+.proyects-githubIcon {
+  color: white;
+  font-size: 23px;
+}
+
+/* 
 .descriptionText-2 {
   font-family: 'montserrat';
   margin-top: 10px;
   font-size: 17px;
   text-align: justify;
-}
+} */
 
 .projectButton-container {
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
 }
 
 .projectButton {
@@ -542,6 +613,10 @@
   z-index: 1;
   font-weight: 600 ;
 }
+
+
+
+
 
 /* footer */
 

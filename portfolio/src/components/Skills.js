@@ -6,10 +6,7 @@ import javascriptIcon from '@iconify-icons/logos/javascript';
 import reactIcon from '@iconify-icons/logos/react';
 import folderTypeMongodb from '@iconify-icons/vscode-icons/folder-type-mongodb';
 import gitIcon from '@iconify-icons/logos/git-icon';
-
 import githubIcon from '@iconify-icons/bi/github';
-
-
 import nodejsIcon from '@iconify-icons/logos/nodejs-icon';
 
 
@@ -20,59 +17,55 @@ const Skills = () => {
             <h4 className="skillsTitle">SKILLS</h4>
             <div className="skillsContainer">
                 <div className="skillBox">
-                    <div className="iconExample" style={{backgroundImage: `url('https://img.icons8.com/color/452/html-5--v1.png')`}}>
+                    <div className="iconContainer" style={{backgroundImage: `url('https://img.icons8.com/color/452/html-5--v1.png')`}}>
                         <Icon icon={fileTypeHtml} fontSize={35} />
                     </div>
                     <p className="tecnology">HTML</p>
                 </div>
                 <div className="skillBox">
-                    <div className="iconExample">
+                    <div className="iconContainer">
                         <Icon icon={fileTypeCss} fontSize={35}/>
                     </div>
                     <p className="tecnology">CSS</p>
                 </div>
                 <div className="skillBox">
-                    <div className="iconExample">
+                    <div className="iconContainer">
                         <Icon icon={javascriptIcon} fontSize={35} />
                     </div>
                     <p className="tecnology">Javacript</p>
                 </div>
                 <div className="skillBox">
-                    <div className="iconExample">
+                    <div className="iconContainer">
                         <Icon icon={reactIcon} fontSize={35} />
                     </div>
                     <p className="tecnology">React</p>
                 </div>
                 <div className="skillBox">
-                    <div className="iconExample">
+                    <div className="iconContainer">
                         <Icon icon={reactIcon} fontSize={35} />
                     </div>
                     <p className="tecnology">React Native</p>
                 </div>
                 <div className="skillBox">
-                    <div className="iconExample">
+                    <div className="iconContainer">
                         <Icon icon={gitIcon} fontSize={35} />
                     </div>
                     <p className="tecnology">Git</p>
                 </div>
                 <div className="skillBox">
-                    <div className="iconExample">
+                    <div className="iconContainer">
                         <Icon icon={folderTypeMongodb} fontSize={35} />
                     </div>
                     <p className="tecnology">MongoDB</p>
                 </div>
                 <div className="skillBox">
-                    <div className=""></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div className="iconExample">
+                    <div className="iconContainer">
                         <Icon icon={nodejsIcon} fontSize={35} />
                     </div>
                     <p className="tecnology">NodeJS and Express</p>
                 </div>
                 <div className="skillBox">
-                    <div className="iconExample">
+                    <div className="iconContainer">
                         <Icon icon={githubIcon} className="githubIcon"/>
                     </div>
                     <p className="tecnology">Github</p>
