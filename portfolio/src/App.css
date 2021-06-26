@@ -174,34 +174,33 @@
 }
 
 
-/* About Me Section */
 
+
+
+
+/* about me section nuevo */
 
 .aboutMe-container {
-  /* background-color: lightseagreen; */
   width: 100%;
-  /* height: 60vh; */
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 80px;
+  padding-bottom: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(135deg,#188b8f,#00cdac);
-  /* background-color: rgb(23,22,34); */
+  background-color: rgb(43,43,43);  
 }
 
-.aboutMe-content-container {
-  width: 65%;
-  height: 80%;
+.aboutMe-content-container{
+  /* width: 65%; */
+  /* height: 500px; */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  /* border: 1px solid black; */
 }
 
 .aboutMe-title {
-  color: white;
+  margin-left: 245px;
+  /* color: white; */
+  color: lightseagreen;
   font-family: 'Montserrat', sans-serif;
   font-size: 35px;
   font-weight: bold;
@@ -209,49 +208,32 @@
 }
 
 .imageAndText-container {
-  /* background-color: green; */
-  /* height: 300px; */
-  width: 100%;
+  flex: 1;
   display: flex;
+}
+
+.personalImage-container {
+  /* width: 20%; */
+  width: 195px;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
-.personalImage-container{
-  display: flex;
-  flex-direction: column;
-  /* background: red; */
-}
-
 .personalImage {
-  /* width: 250px; */
+  /* width: 190px; */
   width: 100%;
-  /* height: 100%; */
-  height: 300px;
+  /* height: 300px; */
+  height: 80%;
   background-position: center;
   background-size: cover;
   border-radius: 2px;
-  margin-bottom: 30px;
 }
-
-.aboutMe-text-container {
-  width: 900px;
-  margin-left: 40px;
-}
-
-.aboutMe-description {
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  font-size: 21px;
-  text-align: justify;
-}
-
-
 
 .curriculumButton {
   position: relative;
-  width: 250px;
-  height: 45px;
+  width: calc(100% - 4px);
+  height: 13%;
   border: 2px solid white;
   display: flex;
   align-items: center;
@@ -259,11 +241,8 @@
   align-self: flex-start; 
 }
 
-.curriculumButton:hover{
-  cursor: pointer;
-}
 
-.cvButton-active { 
+.cvButton-active{ 
   color: white;
   width: 100%;
   height: 100%;
@@ -292,6 +271,8 @@
   font-size: 18px;
   font-family: 'Montserrat', sans-serif;
   color: lightseagreen;
+  /* color: rgb(45, 108, 202); */
+  /* color: rgb(43,43,43); */
   width: 100%;
   height: 100%;
   display: flex;
@@ -315,6 +296,21 @@
   font-weight: 700 ;
 }
 
+.aboutMe-text-container {
+  width: 700px;
+  margin-left: 50px;
+}
+
+.aboutMe-description {
+  color: white;
+  /* color:  rgb(122, 122, 122); */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 19px;
+  text-align: justify;
+}
+
+
 
 
 
@@ -330,9 +326,7 @@
 .skillsSection-Container {
   width: 100%;
   background-color: rgb(235,238,238);
-  /* background-color: black; */
-  /* margin-top: 20px; */
-  padding-top: 10vh;
+  padding-top: 4vh;
   display: flex;
   flex-direction:column;
   justify-content: center;
@@ -340,9 +334,8 @@
 }
 
 .skillsTitle {
-  /* color: white; */
-  /* border-bottom: 3px solid white; */
-  border-bottom: 3px solid black;
+  /* border-bottom: 3px solid black; */
+  border-bottom: 3px solid lightseagreen;
   font-size: 30px;
   font-family: 'montserrat';
   margin-top: 40px;
@@ -421,7 +414,7 @@
   font-family: 'montserrat';
   font-size: 30px;
   margin-bottom: 50px;
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid lightseagreen;
 }
 
 .proyectContainer {
@@ -562,14 +555,13 @@
 }
 
 .projectButton {
-  /* margin-top: 30px; */
   border: 2px solid lightseagreen;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40px;
-  width: 180px;
+  /* height: 40px; */
+  /* width: 180px; */
   position: relative;
 }
 
@@ -584,7 +576,7 @@
   position: absolute;
   transition: all .4s cubic-bezier(.19,1,.22,1);
   background-image: linear-gradient(135deg,#188b8f,#00cdac);
-  border-bottom: 1px solid lightseagreen;
+  /* border-bottom: 1px solid lightseagreen; */
 }
 
 .projectButton-Inactive {
@@ -594,11 +586,12 @@
   left: 0px;
   transition: all .4s cubic-bezier(.19,1,.22,1);
   background-image: linear-gradient(135deg,#188b8f,#00cdac);
-  border-bottom: 1px solid lightseagreen;
+  /* border-bottom: 1px solid lightseagreen; */
 }
 
 .projectButtonText-active {
   text-decoration: none;
+  padding: 12px 40px;
   font-family: 'montserrat';
   color: white;
   z-index: 1;
@@ -606,8 +599,8 @@
 }
 
 .projectButtonText-inactive {
+  padding: 12px 40px;
   text-decoration: none;
-  /* font-size: 22px; */
   font-family: 'Montserrat', sans-serif;
   color: lightseagreen;
   z-index: 1;
