@@ -6,7 +6,7 @@ import heartSolid from '@iconify-icons/clarity/heart-solid';
 
 const Footer = () => {
     return(
-        <div className="footerContainer">
+        <div id="prueba" className="footerContainer">
             <div className="contentContainer">
                 <Icon icon={arrowUpAlt2} className="upArrow-icon" />
                 <div className="footerIcons-container">

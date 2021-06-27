@@ -10,12 +10,30 @@ import folderTypeMongodb from '@iconify-icons/vscode-icons/folder-type-mongodb';
 import gitIcon from '@iconify-icons/logos/git-icon';
 import githubIcon from '@iconify-icons/bi/github';
 import nodejsIcon from '@iconify-icons/logos/nodejs-icon';
+import { makeStyles } from '@material-ui/core/styles';
+import Modal from '@material-ui/core/Modal';
+import Backdrop from '@material-ui/core/Backdrop';
+import Fade from '@material-ui/core/Fade';
+
+const useStyles = makeStyles((theme) => ({
+    modal: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    paper: {
+      backgroundColor: theme.palette.background.paper,
+      border: '2px solid #000',
+      boxShadow: theme.shadows[5],
+      padding: theme.spacing(2, 4, 3),
+    },
+  }));
 
 const Proyects = () => {
-
     const [leftButtonIsHovered, setLeftButtonIsHovered] = useState(false) 
-    // const [rightButtonIsHovered, setRightButtonIsHovered] = useState(false)
     const [hoveredButton, setHoveredButton] = useState('')
+    const classes = useStyles();
+    const [open, setOpen] = React.useState(false);
 
     const proyects = [
         {
@@ -28,6 +46,7 @@ const Proyects = () => {
             title: 'MindDeco Mobile App',
             description: 'MindDeco mobile application, where user can intuitively make same actions that in web page.',
             imgs: ['https://i.imgur.com/4txxQ7N.png', 'https://i.imgur.com/Im8IBDf.png', 'https://i.imgur.com/l0os5dR.png', 'https://i.imgur.com/USWgGqK.png', 'https://i.imgur.com/mOq4ako.png', 'https://i.imgur.com/dzpJqMC.png', 'https://i.imgur.com/thCORiL.png', 'https://i.imgur.com/Heq66cH.png', 'https://i.imgur.com/FVi162k.png', 'https://i.imgur.com/iOWxdn1.png'],
+            hostLink: "#",
             githubLink: 'https://github.com/Danielcomes92/mindDeco-native'
         },{
             title: 'Reviewers',
@@ -50,10 +69,17 @@ const Proyects = () => {
         }       
     ]
     
+    const handleOpen = (proyectName) => {
+        // if(proyectName ===)
+        setOpen(true);
+        console.log(proyectName);
+      };
+    
+      const handleClose = () => {
+        setOpen(false);
+      };
     
     
-    
-    https://github.com/MatuMto/MyTinerary-mobile
     return (
         <div className="proyectsContainer">
             <h3 className="proyectsTitle">PROJECTS</h3>
@@ -61,19 +87,49 @@ const Proyects = () => {
 
             {proyects.map((proyect, index) => {
                 return(
-                <div className="proyectContainer">
+                <div id={index} className="proyectContainer">
                     <div className="carrouselContainer">
                         <Carousel showThumbs={false} className="carrousel" infiniteLoop={true} autoPlay={true} emulateTouch={true}>
                             {proyect.imgs.map(img => <div className="carrusel-image" style={{backgroundImage: `url(${img})`}}></div>)}
                         </Carousel>
                         <div className="projectButton-container">
-                            <div onMouseOver={()=> setHoveredButton('proyect' + index)} onMouseLeave={() => setHoveredButton('noOne')} className="projectButton">
+                            <div onMouseOver={()=> setHoveredButton('proyect' + index)}  onMouseLeave={() => setHoveredButton('noOne')} className="projectButton">
                                 <div className={hoveredButton === `proyect${index}` ? "projectButton-Active" : "projectButton-Inactive"}></div>
+                            {proyect.hostLink !== "#" ?
                                 <a href={proyect.hostLink} target="_blank" rel="noreferrer" className={hoveredButton === `proyect${index}` ? "projectButtonText-active" : "projectButtonText-inactive"}>See Project</a>
+                                :
+                                <p onClick={handleOpen} className={hoveredButton === `proyect${index}` ? "projectButtonText-active" : "projectButtonText-inactive"}>See Project</p>
+
+                            }
+                                {/* <a href={proyect.hostLink} target="_blank"  rel="noreferrer" className={hoveredButton === `proyect${index}` ? "projectButtonText-active" : "projectButtonText-inactive"}>See Project</a> */}
                             </div>
                             <div onMouseOver={()=> setHoveredButton(`github${index}`)} onMouseLeave={() => setHoveredButton('noOne')} className="projectButton">
                                 <div className={hoveredButton === `github${index}` ? "projectButton-Active" : "projectButton-Inactive"}></div>
                                 <a href={proyect.githubLink} target="_blank" rel="noreferrer" className={hoveredButton === `github${index}` ? "projectButtonText-active" : "projectButtonText-inactive"}>Open on Github</a>
+                            </div>
+                            <div>
+                                {/* <button type="button" onClick={handleOpen}>
+                                    react-transition-group
+                                </button> */}
+                                <Modal
+                                    aria-labelledby="transition-modal-title"
+                                    aria-describedby="transition-modal-description"
+                                    className={classes.modal}
+                                    open={open}
+                                    onClose={handleClose}
+                                    closeAfterTransition
+                                    BackdropComponent={Backdrop}
+                                    BackdropProps={{
+                                    timeout: 500,
+                                    }}
+                                >
+                                    <Fade in={open}>
+                                    <div className={classes.paper}>
+                                        <h2 id="transition-modal-title">Transition modal</h2>
+                                        <p id="transition-modal-description">react-transition-group animates me.</p>
+                                    </div>
+                                    </Fade>
+                                </Modal>
                             </div>
                         </div>
                     </div>
