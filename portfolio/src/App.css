@@ -9,16 +9,14 @@
 }
 
 .homeContainer {
-  /* background-color: lightblue; */
   width: 100%;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: lightblue;  
   position: relative;
-  /* margin: -10px -10px; */
-  /* padding: 0px 0px; */
   overflow: hidden;
 }
 
@@ -93,6 +91,29 @@
   color: white;
 }
 
+.downArrow-container {
+  background: white;
+  /* padding: 20px; */
+  /* width: 100px; */
+  /* height: 100px; */
+  border-radius: 100%;
+  z-index: 1;
+  position: absolute;
+  bottom: 20px;
+}
+
+.downArrow{
+  /* color: black; */
+  /* background: white; */
+  /* margin: 0px !important; */
+  /* padding: 0px !important; */
+  font-size: 50px;
+  margin-top: 5px;
+  margin-left: 4px;
+  /* border-radius: 100%; */
+  /* position: absolute; */
+  /* bottom: 20px; */
+}
 
 
 

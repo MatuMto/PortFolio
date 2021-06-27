@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import { Icon, InlineIcon } from '@iconify/react';
 import linkedinIcon from '@iconify-icons/brandico/linkedin';
 import githubFill from '@iconify-icons/akar-icons/github-fill';
+import arrowDownAlt2 from '@iconify-icons/dashicons/arrow-down-alt2';
+import bxsDownArrowCircle from '@iconify-icons/bx/bxs-down-arrow-circle';
+import chevronDown from '@iconify-icons/mdi-light/chevron-down';
 
 
 const Home = () => {
@@ -27,19 +30,12 @@ const Home = () => {
                     </a>
                 </div>
             </div>
+            <div className="downArrow-container">
+                {/* <Icon icon={arrowDownAlt2} className="downArrow"/> */}
+                {/* <Icon icon={bxsDownArrowCircle} className="downArrow"/> */}
+                <Icon icon={chevronDown} className="downArrow"/>
+            </div>
         </div>
-        // <div className="homeContainer" style={{backgroundImage: 'url(https://i.imgur.com/RS097Vt.jpg)'}}>
-        //     <div className="presentationText-container">                
-        //         <p className="presentationText"> Hi! My name is <span className="coloredText">Mateo Lorenzo.</span>  
-        //             <br/>Im a web and mobile full stack
-        //             <br/> software developer
-        //         </p>
-        //         <div onMouseOver={()=> setButtonIsHovered(true)} onMouseLeave={() => setButtonIsHovered(false)} className="verMas-button">
-        //             <div className={buttonIsHovered ? "verMasActivo" : "verMasInactivo"}></div>
-        //             <p className={buttonIsHovered ? "verMasTextActivo" : "verMasTextInactivo"}>Know more</p>
-        //         </div>
-        //     </div>
-        // </div>
     )
 }
 
