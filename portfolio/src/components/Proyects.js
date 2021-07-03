@@ -14,6 +14,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
+import ReactPlayer from 'react-player'
 
 const useStyles = makeStyles((theme) => ({
     modal: {
@@ -33,57 +34,65 @@ const Proyects = () => {
     const [leftButtonIsHovered, setLeftButtonIsHovered] = useState(false) 
     const [hoveredButton, setHoveredButton] = useState('')
     const classes = useStyles();
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = useState(false);
+    const [openedMobileProyect, setOpenedMobileProyect] = useState('')
 
     const proyects = [
         {
             title: 'MindDeco',
-            description: 'Full stack e-commerce where owner can add, modify and delete products and people can buy differents home products.',
+            description: 'Full Stack Interior Design e-commerce where owner can add, modify and delete products and people can create an account, search and filter between differents products and also save and buy.',
             imgs: ['https://i.imgur.com/4txxQ7N.png', 'https://i.imgur.com/Im8IBDf.png', 'https://i.imgur.com/l0os5dR.png', 'https://i.imgur.com/USWgGqK.png', 'https://i.imgur.com/mOq4ako.png', 'https://i.imgur.com/dzpJqMC.png', 'https://i.imgur.com/thCORiL.png', 'https://i.imgur.com/Heq66cH.png', 'https://i.imgur.com/FVi162k.png', 'https://i.imgur.com/iOWxdn1.png'],
             hostLink: "https://minddeco.herokuapp.com/",
-            githubLink: 'https://github.com/francescapozzolo/mindDeco'
+            githubLink: 'https://github.com/francescapozzolo/mindDeco',
+            youtubeLink: '#'
         },{
             title: 'MindDeco Mobile App',
-            description: 'MindDeco mobile application, where user can intuitively make same actions that in web page.',
-            imgs: ['https://i.imgur.com/4txxQ7N.png', 'https://i.imgur.com/Im8IBDf.png', 'https://i.imgur.com/l0os5dR.png', 'https://i.imgur.com/USWgGqK.png', 'https://i.imgur.com/mOq4ako.png', 'https://i.imgur.com/dzpJqMC.png', 'https://i.imgur.com/thCORiL.png', 'https://i.imgur.com/Heq66cH.png', 'https://i.imgur.com/FVi162k.png', 'https://i.imgur.com/iOWxdn1.png'],
+            description: 'MindDeco Mobile Aplication based on React Native where, as in web, people can register and login, and also search and buy different awesome Interior Design Products.',
+            imgs: ['https://i.imgur.com/3PhufSi.png', 'https://i.imgur.com/tqsuWeL.png', 'https://i.imgur.com/5g1Pcp2.png', 'https://i.imgur.com/hJhNqdF.png', 'https://i.imgur.com/mxpJH18.png', 'https://i.imgur.com/DdgrxWE.png'],
             hostLink: "#",
-            githubLink: 'https://github.com/Danielcomes92/mindDeco-native'
+            githubLink: 'https://github.com/Danielcomes92/mindDeco-native',
+            youtubeLink: 'https://www.youtube.com/watch?v=xatEQLrf5cw'
         },{
             title: 'Reviewers',
-            description: 'Full stack web page where users can read differents reviews and also create and modify or delete those ones created by them.',
+            description: 'Full stack web page where users can read and save differents reviews, create an account and also can create, modify and delete those reviews created by them.',
             imgs: ['https://i.imgur.com/cr6lACv.png', 'https://i.imgur.com/CkkvKyf.png', 'https://i.imgur.com/mhuhwFr.png', 'https://i.imgur.com/Ymk3C1Z.png', 'https://i.imgur.com/wP2BASM.png', 'https://i.imgur.com/Pnx8JLt.png', 'https://i.imgur.com/VMznhYz.png'],
             hostLink: "https://los-reviewers.herokuapp.com/",
-            githubLink: 'https://github.com/JoseZaccaro/ReViewers'
+            githubLink: 'https://github.com/JoseZaccaro/ReViewers',
+            youtubeLink: '#'
         },{
             title: 'MyTinerary',
-            description: 'Web Page where user can create an account and choose itineraries available in the world most touristic cities.',
-            imgs: ['https://i.imgur.com/MhfwhWD.png', 'https://i.imgur.com/7D2oyZF.png', 'https://i.imgur.com/Bu5XT48.png', 'https://i.imgur.com/WVCdGTW.png', 'https://i.imgur.com/Z4nF1kS.png'],
+            description: 'Full Stack travel web page where user can create an account and navigate trough differents itineraries available in the world most touristic cities interacting dynamically with each one.',
+            imgs: ['https://i.imgur.com/4txxQ7N.png', 'https://i.imgur.com/Im8IBDf.png', 'https://i.imgur.com/l0os5dR.png', 'https://i.imgur.com/USWgGqK.png', 'https://i.imgur.com/mOq4ako.png', 'https://i.imgur.com/dzpJqMC.png', 'https://i.imgur.com/thCORiL.png', 'https://i.imgur.com/Heq66cH.png', 'https://i.imgur.com/FVi162k.png', 'https://i.imgur.com/iOWxdn1.png'],
             hostLink: "https://mytinerarylorenzo.herokuapp.com/",
-            githubLink: 'https://github.com/MatuMto/MyTinerary'
+            githubLink: 'https://github.com/MatuMto/MyTinerary',
+            youtubeLink: '#'
         },{
             title: 'MyTinerary Mobile App',
-            description: 'MyTinerary mobile application where user can also register/login and view differents itineraries.',
-            imgs: ['https://i.imgur.com/MhfwhWD.png', 'https://i.imgur.com/7D2oyZF.png', 'https://i.imgur.com/Bu5XT48.png', 'https://i.imgur.com/WVCdGTW.png', 'https://i.imgur.com/Z4nF1kS.png'],
-            hostLink: "https://mytinerarylorenzo.herokuapp.com/",
-            githubLink: 'https://github.com/MatuMto/MyTinerary-mobile'
+            description: 'MyTinerary Mobile Application  where user can create an account and navigate trough differents itineraries available in the world most touristic cities.',
+            imgs: ['https://i.imgur.com/6r0LfjW.png', 'https://i.imgur.com/vbpV3md.png', 'https://i.imgur.com/VRTJ8ya.png', 'https://i.imgur.com/AK61RdC.png', 'https://i.imgur.com/2SEJdRT.png'],
+            hostLink: "#",
+            githubLink: 'https://github.com/MatuMto/MyTinerary-mobile',
+            youtubeLink: 'https://www.youtube.com/watch?v=Keln7ty8xC0'
         }       
     ]
     
-    const handleOpen = (proyectName) => {
+    const handleOpen = () => {
         // if(proyectName ===)
         setOpen(true);
-        console.log(proyectName);
       };
     
       const handleClose = () => {
         setOpen(false);
       };
     
+    const viewMobileProyect = (proyectOpened) => {
+        handleOpen()
+        setOpenedMobileProyect(proyectOpened)
+    }
     
     return (
         <div className="proyectsContainer">
             <h3 className="proyectsTitle">PROJECTS</h3>
-
 
             {proyects.map((proyect, index) => {
                 return(
@@ -95,88 +104,92 @@ const Proyects = () => {
                         <div className="projectButton-container">
                             <div onMouseOver={()=> setHoveredButton('proyect' + index)}  onMouseLeave={() => setHoveredButton('noOne')} className="projectButton">
                                 <div className={hoveredButton === `proyect${index}` ? "projectButton-Active" : "projectButton-Inactive"}></div>
-                            {proyect.hostLink !== "#" ?
-                                <a href={proyect.hostLink} target="_blank" rel="noreferrer" className={hoveredButton === `proyect${index}` ? "projectButtonText-active" : "projectButtonText-inactive"}>See Project</a>
-                                :
-                                <p onClick={handleOpen} className={hoveredButton === `proyect${index}` ? "projectButtonText-active" : "projectButtonText-inactive"}>See Project</p>
-
-                            }
-                                {/* <a href={proyect.hostLink} target="_blank"  rel="noreferrer" className={hoveredButton === `proyect${index}` ? "projectButtonText-active" : "projectButtonText-inactive"}>See Project</a> */}
+                                {proyect.hostLink !== "#" ?
+                                    <a href={proyect.hostLink} target="_blank" rel="noreferrer" className={hoveredButton === `proyect${index}` ? "projectButtonText-active" : "projectButtonText-inactive"}>See Project</a>
+                                    :
+                                    <p onClick={()=>viewMobileProyect(proyect.youtubeLink)} className={hoveredButton === `proyect${index}` ? "projectButtonText-active" : "projectButtonText-inactive"}>See Project</p>
+                                }
+                                <div>
+                                    <Modal
+                                        aria-labelledby="transition-modal-title"
+                                        aria-describedby="transition-modal-description"
+                                        className={classes.modal}
+                                        open={open}
+                                        onClose={handleClose}
+                                        closeAfterTransition
+                                        BackdropComponent={Backdrop}
+                                        BackdropProps={{
+                                            timeout: 500,
+                                        }}
+                                    >
+                                        <Fade in={open}>
+                                            <div className="modalContent-container">
+                                                <ReactPlayer
+                                                    url={openedMobileProyect}
+                                                    className='react-player'
+                                                    playing
+                                                    width='100%'
+                                                    height='100%'
+                                                    controls={true}
+                                                />
+                                            </div>
+                                        </Fade>
+                                    </Modal>
+                                </div>
                             </div>
                             <div onMouseOver={()=> setHoveredButton(`github${index}`)} onMouseLeave={() => setHoveredButton('noOne')} className="projectButton">
                                 <div className={hoveredButton === `github${index}` ? "projectButton-Active" : "projectButton-Inactive"}></div>
                                 <a href={proyect.githubLink} target="_blank" rel="noreferrer" className={hoveredButton === `github${index}` ? "projectButtonText-active" : "projectButtonText-inactive"}>Open on Github</a>
                             </div>
-                            <div>
-                                {/* <button type="button" onClick={handleOpen}>
-                                    react-transition-group
-                                </button> */}
-                                <Modal
-                                    aria-labelledby="transition-modal-title"
-                                    aria-describedby="transition-modal-description"
-                                    className={classes.modal}
-                                    open={open}
-                                    onClose={handleClose}
-                                    closeAfterTransition
-                                    BackdropComponent={Backdrop}
-                                    BackdropProps={{
-                                    timeout: 500,
-                                    }}
-                                >
-                                    <Fade in={open}>
-                                    <div className={classes.paper}>
-                                        <h2 id="transition-modal-title">Transition modal</h2>
-                                        <p id="transition-modal-description">react-transition-group animates me.</p>
-                                    </div>
-                                    </Fade>
-                                </Modal>
-                            </div>
                         </div>
                     </div>
                     <div className="proyectDescription-container">
-                        <h4 className="proyectTitle">{proyect.title}</h4>
-                        <p className="descriptionText-1">{proyect.description}</p>
+                        <div className="proyectDescription-subcontainer">
+                            <h4 className="proyectTitle">{proyect.title}</h4>
+                            <p className="descriptionText-1">{proyect.description}</p>
+                        </div>
                         <div className="tecnologiesUsed-container">
                             <p className="tecnologiesUsed-tittle">Tecnologies used:</p>
                             <div className="tecnologiesUsed-subContainer">
-                                <div className="tecnology-box marginBottom5">
+                                <div className="tecnology-box">
                                     <div className="proyects-iconContainer">
                                         <Icon icon={fileTypeHtml} fontSize={23} />
                                     </div>
                                 </div>
-                                <div className="tecnology-box">
+                                <div className="tecnology-box responsive-margin">
                                     <div className="proyects-iconContainer">
-                                        <Icon icon={fileTypeCss} fontSize={23}/>
+                                        <Icon icon={fileTypeCss} className="proyect-tecnologyIcon"/>
                                     </div>
                                 </div>
                                 <div className="tecnology-box">
                                     <div className="proyects-iconContainer">
-                                        <Icon icon={javascriptIcon} fontSize={23} />
+                                        <Icon icon={javascriptIcon} className="proyect-tecnologyIcon"/>
                                     </div>
                                 </div>
                                 <div className="tecnology-box">
                                     <div className="proyects-iconContainer">
-                                        <Icon icon={reactIcon} fontSize={23} />
+                                        <Icon icon={reactIcon} className="proyect-tecnologyIcon"/>
+                                    </div>
+                                </div>
+                                <div className="tecnology-box responsive-margin">
+                                    <div className="proyects-iconContainer">
+                                        <Icon icon={gitIcon} className="proyect-tecnologyIcon" />
                                     </div>
                                 </div>
                                 <div className="tecnology-box">
                                     <div className="proyects-iconContainer">
-                                        <Icon icon={gitIcon} fontSize={23} />
+                                        <Icon icon={githubIcon} className="proyect-tecnologyIcon proyects-githubIcon"/>
                                     </div>
+
                                 </div>
                                 <div className="tecnology-box">
                                     <div className="proyects-iconContainer">
-                                        <Icon icon={folderTypeMongodb} fontSize={23} />
+                                        <Icon icon={nodejsIcon} className="proyect-tecnologyIcon"/>
                                     </div>
                                 </div>
-                                <div className="tecnology-box">
+                                <div className="tecnology-box responsive-margin">
                                     <div className="proyects-iconContainer">
-                                        <Icon icon={nodejsIcon} fontSize={23} />
-                                    </div>
-                                </div>
-                                <div className="tecnology-box">
-                                    <div className="proyects-iconContainer">
-                                        <Icon icon={githubIcon} className="proyects-githubIcon"/>
+                                        <Icon icon={folderTypeMongodb} className="proyect-tecnologyIcon"/>
                                     </div>
                                 </div>
                             </div>

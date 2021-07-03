@@ -7,7 +7,7 @@ const AboutMe = () => {
     const [buttonIsHovered, setButtonIsHovered] = useState(false)
 
     return (
-        <div className="aboutMe-container">
+        <div id="aboutMe_Container" className="aboutMe-container">
             <div className="aboutMe-content-container">
                 <p className="aboutMe-title">ABOUT ME</p> 
                 <div className="imageAndText-container">

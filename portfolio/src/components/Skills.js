@@ -18,49 +18,49 @@ const Skills = () => {
             <div className="skillsContainer">
                 <div className="skillBox">
                     <div className="iconContainer" style={{backgroundImage: `url('https://img.icons8.com/color/452/html-5--v1.png')`}}>
-                        <Icon icon={fileTypeHtml} fontSize={35} />
+                        <Icon icon={fileTypeHtml} className="skillIcon"/>
                     </div>
                     <p className="tecnology">HTML</p>
                 </div>
                 <div className="skillBox">
                     <div className="iconContainer">
-                        <Icon icon={fileTypeCss} fontSize={35}/>
+                        <Icon icon={fileTypeCss} className="skillIcon"/>
                     </div>
                     <p className="tecnology">CSS</p>
                 </div>
                 <div className="skillBox">
                     <div className="iconContainer">
-                        <Icon icon={javascriptIcon} fontSize={35} />
+                        <Icon icon={javascriptIcon} className="skillIcon"/>
                     </div>
                     <p className="tecnology">Javacript</p>
                 </div>
                 <div className="skillBox">
                     <div className="iconContainer">
-                        <Icon icon={reactIcon} fontSize={35} />
+                        <Icon icon={reactIcon} className="skillIcon"/>
                     </div>
                     <p className="tecnology">React</p>
                 </div>
                 <div className="skillBox">
                     <div className="iconContainer">
-                        <Icon icon={reactIcon} fontSize={35} />
+                        <Icon icon={reactIcon} className="skillIcon"/>
                     </div>
                     <p className="tecnology">React Native</p>
                 </div>
                 <div className="skillBox">
                     <div className="iconContainer">
-                        <Icon icon={gitIcon} fontSize={35} />
+                        <Icon icon={gitIcon} className="skillIcon"/>
                     </div>
                     <p className="tecnology">Git</p>
                 </div>
                 <div className="skillBox">
                     <div className="iconContainer">
-                        <Icon icon={folderTypeMongodb} fontSize={35} />
+                        <Icon icon={folderTypeMongodb} className="skillIcon"/>
                     </div>
                     <p className="tecnology">MongoDB</p>
                 </div>
                 <div className="skillBox">
                     <div className="iconContainer">
-                        <Icon icon={nodejsIcon} fontSize={35} />
+                        <Icon icon={nodejsIcon} className="skillIcon"/>
                     </div>
                     <p className="tecnology">NodeJS and Express</p>
                 </div>
@@ -71,7 +71,7 @@ const Skills = () => {
                     <p className="tecnology">Github</p>
                 </div>
             </div>
-            <div className='blackDivisorLine'></div>
+            {/* <div className='blackDivisorLine'></div> */}
         </div>
     )
 }
