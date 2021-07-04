@@ -11,7 +11,7 @@ const Footer = () => {
     return(
         <div id="prueba" className="footerContainer">
             <div className="contentContainer">
-                <a href="#home" onMouseOver={()=>setUpArrowIsHovered(true)} onMouseLeave={()=>setUpArrowIsHovered(false)}>
+                <a href="#Home" onMouseOver={()=>setUpArrowIsHovered(true)} onMouseLeave={()=>setUpArrowIsHovered(false)}>
                     <Icon icon={arrowUpAlt2} className={upArrowIsHovered ? "upArrow-icon-active" : "upArrow-icon-inactive"} />
                 </a>
                 <div className="footerIcons-container">

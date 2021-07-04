@@ -12,7 +12,7 @@ const Home = () => {
     const [downArrowIsHovered, setDownArrowIsHovered] = useState(false)
 
     return(
-        <div id="home_container" className="homeContainer">
+        <div id="Home" className="homeContainer">
             <div className="home-backgroundImage" style={{backgroundImage: `url(https://i.imgur.com/RS097Vt.jpg)`}}></div>
             <div className='home-ContentContainer'>
                 <div className="homeTitle-container">
