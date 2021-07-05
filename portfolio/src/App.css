@@ -380,8 +380,8 @@
 }
 
 .carrusel-image {
-  /* width: 100%; */
-  width: 500px;
+  width: 100%;
+  /* width: 500px; */
   height: 300px;
   background-size: cover;
   background-position: center;
@@ -559,6 +559,7 @@
 
 .contentContainer{
   width: 30%;
+  min-width: 350px;
   height: 65%;
   display: flex;
   flex-direction: column;
@@ -614,12 +615,19 @@
   transition: all .2s ease;
 }
 
-.footerText {
-  border-top: 2px solid hsla(0,0%,100%,.1);
+.footer-divisorLine{
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 2px;
+  background: hsla(0,0%,100%,.1);
+}
+
+.footerText {
+  /* border-top: 2px solid hsla(0,0%,100%,.1); */
+  width: 100%;
+  text-align: center;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
   padding-top: 10px;
   padding-bottom: 10px;
   font-family: 'Montserrat';
@@ -1053,11 +1061,18 @@
 @media(max-width: 450px){
   .projectButtonText-inactive{
     padding: 9px 15px;
+    font-size: 13px;
   }
   .projectButtonText-active{
     padding: 5px 15px;
+    font-size: 13px;
   }
-
+  .contentContainer{
+    min-width: 80%;
+  }
+  .footerText{
+    width: 200px;
+  }
 }
 
 

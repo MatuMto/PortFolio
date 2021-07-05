@@ -22,6 +22,7 @@ const Footer = () => {
                         <Icon icon={githubFill} className="github-icon" />
                     </a>
                 </div>
+                <div className="footer-divisorLine"></div>
                 <div className="footerText">© 2021 - Developed with <Icon icon={heartSolid} className="heart-icon" /> by Mateo Lorenzo</div>
             </div>
         </div>
