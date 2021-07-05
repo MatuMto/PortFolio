@@ -63,7 +63,7 @@ const Proyects = () => {
             title: 'MyTinerary',
             description: 'Full Stack travel web page where user can create an account and navigate trough differents itineraries available in the world most touristic cities interacting dynamically with each one.',
             imgs: ['https://i.imgur.com/Xv5CVuZ.png', 'https://i.imgur.com/AnnfSYy.png', 'https://i.imgur.com/EWwFMTL.png', 'https://i.imgur.com/7qq0W9S.png', 'https://i.imgur.com/dgU9Ztk.png', 'https://i.imgur.com/Baujpww.png', 'https://i.imgur.com/GQxdSq1.png', 'https://i.imgur.com/dvUl1C6.png', 'https://i.imgur.com/NbA6qoW.png', 'https://i.imgur.com/A0kVnZU.png'],
-            hostLink: "https://mytinerarylorenzo.herokuapp.com/",
+            hostLink: "https://mytinerary-lorenzo.herokuapp.com/",
             githubLink: 'https://github.com/MatuMto/MyTinerary',
             youtubeLink: '#'
         },{
