@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
+html{
+  font-size: 100%;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -687,6 +691,9 @@
   .homeTitle{ 
     font-size: 80px;
   }
+  .homeText-container{
+    width: 580px;
+  }
   .homeText{
     font-size: 17px;
   }
@@ -899,6 +906,9 @@
   .homeTitle {
     font-size: 70px;
   }
+  .homeText-container{
+    width: 500px;
+  }
   .homeText{
     font-size: 15px;
   }
@@ -1001,15 +1011,17 @@
 
 
 
-@media (max-width: 580px){
+@media (max-width: 600px){
   .homeTitle-container{ 
-    width: 50vw;
-    line-height: 75px;
-    text-align: center;
-    /* background-color: red; */
+    /* width: 50vw; */
+    /* line-height: 75px; */
+    /* text-align: center; */
+  }
+  .homeTitle{
+    font-size: 50px;
   }
   .homeText{
-    font-size: 17px;
+    font-size: 15px;
     text-align: center;
   }
   .homeText-container {
@@ -1059,6 +1071,9 @@
 
 
 @media(max-width: 450px){
+  .homeTitle{
+    font-size: 40px;
+  }
   .projectButtonText-inactive{
     padding: 9px 15px;
     font-size: 13px;
@@ -1092,6 +1107,12 @@
 
 
 @media(max-width: 350px){
+  .homeTitle{
+    font-size: 30px;
+  }
+  .homeText{
+    font-size: 13px;
+  }
   .skillBox{
     width: 70%;
   }
