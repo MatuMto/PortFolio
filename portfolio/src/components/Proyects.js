@@ -99,7 +99,7 @@ const Proyects = () => {
                 <div id={index} className="proyectContainer">
                     <div className="carrouselContainer">
                         <Carousel showThumbs={false} className="carrousel" infiniteLoop={true} autoPlay={true} emulateTouch={true}>
-                            {proyect.imgs.map(img => <div className="carrusel-image" style={{backgroundImage: `url(${img})`}}></div>)}
+                            {proyect.imgs.map(img => <a href={proyect.hostLink} target="_blank"><div className="carrusel-image" style={{backgroundImage: `url(${img})`}}></div></a>)}
                         </Carousel>
                         <div className="projectButton-container">
                             <div onMouseOver={()=> setHoveredButton('proyect' + index)}  onMouseLeave={() => setHoveredButton('noOne')} className="projectButton">
