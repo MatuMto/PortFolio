@@ -1094,12 +1094,11 @@ html{
 
 @media(max-width: 400px){
   .skillsContainer{
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
   }
   .skillBox{
-    width: 50%;
-    /* background: red; */
+    width: 45%;
     margin-left: 0px !important;
   }
 }
@@ -1113,7 +1112,11 @@ html{
   .homeText{
     font-size: 13px;
   }
+  .skillsContainer{
+    justify-content: space-evenly;
+    width: 100%;
+  }
   .skillBox{
-    width: 70%;
+    height: 100px;
   }
 }
