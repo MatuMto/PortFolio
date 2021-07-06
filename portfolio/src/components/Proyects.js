@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
 import fileTypeHtml from '@iconify-icons/vscode-icons/file-type-html';
 import fileTypeCss from '@iconify-icons/vscode-icons/file-type-css';
 import javascriptIcon from '@iconify-icons/logos/javascript';
@@ -31,7 +31,6 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 const Proyects = () => {
-    const [leftButtonIsHovered, setLeftButtonIsHovered] = useState(false) 
     const [hoveredButton, setHoveredButton] = useState('')
     const classes = useStyles();
     const [open, setOpen] = useState(false);
@@ -40,7 +39,7 @@ const Proyects = () => {
     const proyects = [
         {
             title: 'MindDeco',
-            description: 'Full Stack Interior Design e-commerce where owner can add, modify and delete products and people can create an account, search and filter between differents products and also save and buy.',
+            description: 'Full Stack Interior Design e-commerce where owner can add, modify and delete products and people can create an account, search and filter between differents products and also save them and buy.',
             imgs: ['https://i.imgur.com/4txxQ7N.png', 'https://i.imgur.com/Im8IBDf.png', 'https://i.imgur.com/l0os5dR.png', 'https://i.imgur.com/USWgGqK.png', 'https://i.imgur.com/mOq4ako.png', 'https://i.imgur.com/dzpJqMC.png', 'https://i.imgur.com/thCORiL.png', 'https://i.imgur.com/Heq66cH.png', 'https://i.imgur.com/FVi162k.png', 'https://i.imgur.com/iOWxdn1.png'],
             hostLink: "https://minddeco.herokuapp.com/",
             githubLink: 'https://github.com/francescapozzolo/mindDeco',
@@ -100,7 +99,7 @@ const Proyects = () => {
                     <div className="carrouselContainer">
                         <Carousel showThumbs={false} className="carrousel" infiniteLoop={true} autoPlay={true} emulateTouch={true}>
                             {proyect.imgs.map(img => proyect.hostLink !== '#' ?
-                                 <a href={proyect.hostLink} target="_blank"><div className="carrusel-image" style={{backgroundImage: `url(${img})`}}></div></a>
+                                 <a href={proyect.hostLink} target="_blank" rel="noreferrer"><div className="carrusel-image" style={{backgroundImage: `url(${img})`}}></div></a>
                                  : <div onClick={()=>viewMobileProyect(proyect.youtubeLink)} className="carrusel-image" style={{backgroundImage: `url(${img})`}}></div>
                             )}
                         </Carousel>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
 import fileTypeHtml from '@iconify-icons/vscode-icons/file-type-html';
 import fileTypeCss from '@iconify-icons/vscode-icons/file-type-css';
 import javascriptIcon from '@iconify-icons/logos/javascript';
@@ -71,7 +71,6 @@ const Skills = () => {
                     <p className="tecnology">Github</p>
                 </div>
             </div>
-            {/* <div className='blackDivisorLine'></div> */}
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
 import linkedinIcon from '@iconify-icons/brandico/linkedin';
 import githubFill from '@iconify-icons/akar-icons/github-fill';
 import arrowUpAlt2 from '@iconify-icons/dashicons/arrow-up-alt2';
