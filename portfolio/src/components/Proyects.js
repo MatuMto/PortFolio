@@ -43,40 +43,44 @@ const Proyects = () => {
             imgs: ['https://i.imgur.com/4txxQ7N.png', 'https://i.imgur.com/Im8IBDf.png', 'https://i.imgur.com/l0os5dR.png', 'https://i.imgur.com/USWgGqK.png', 'https://i.imgur.com/mOq4ako.png', 'https://i.imgur.com/dzpJqMC.png', 'https://i.imgur.com/thCORiL.png', 'https://i.imgur.com/Heq66cH.png', 'https://i.imgur.com/FVi162k.png', 'https://i.imgur.com/iOWxdn1.png'],
             hostLink: "https://minddeco.herokuapp.com/",
             githubLink: 'https://github.com/francescapozzolo/mindDeco',
-            youtubeLink: '#'
+            youtubeLink: '#',
+            tecnologiesUsed:"html, css, js, react, git, github, mongo, node"
         },{
             title: 'MindDeco Mobile App',
             description: 'MindDeco Mobile Aplication based on React Native where, as in web, people can register and login, and also search and buy different awesome Interior Design Products.',
             imgs: ['https://i.imgur.com/3PhufSi.png', 'https://i.imgur.com/tqsuWeL.png', 'https://i.imgur.com/5g1Pcp2.png', 'https://i.imgur.com/hJhNqdF.png', 'https://i.imgur.com/mxpJH18.png', 'https://i.imgur.com/DdgrxWE.png'],
             hostLink: "#",
             githubLink: 'https://github.com/Danielcomes92/mindDeco-native',
-            youtubeLink: 'https://www.youtube.com/watch?v=xatEQLrf5cw'
+            youtubeLink: 'https://www.youtube.com/watch?v=xatEQLrf5cw',
+            tecnologiesUsed:"html, css, js, reactNative, git, github, mongo, node"
         },{
             title: 'Reviewers',
             description: 'Full stack web page where users can read and save differents reviews, create an account and also can create, modify and delete those reviews created by them.',
             imgs: ['https://i.imgur.com/cr6lACv.png', 'https://i.imgur.com/CkkvKyf.png', 'https://i.imgur.com/mhuhwFr.png', 'https://i.imgur.com/Ymk3C1Z.png', 'https://i.imgur.com/wP2BASM.png', 'https://i.imgur.com/Pnx8JLt.png', 'https://i.imgur.com/VMznhYz.png'],
             hostLink: "https://los-reviewers.herokuapp.com/",
             githubLink: 'https://github.com/JoseZaccaro/ReViewers',
-            youtubeLink: '#'
+            youtubeLink: '#',
+            tecnologiesUsed:"html, css, js, react, git, github, mongo, node"
         },{
             title: 'MyTinerary',
             description: 'Full Stack travel web page where user can create an account and navigate trough differents itineraries available in the world most touristic cities interacting dynamically with each one.',
             imgs: ['https://i.imgur.com/Xv5CVuZ.png', 'https://i.imgur.com/AnnfSYy.png', 'https://i.imgur.com/EWwFMTL.png', 'https://i.imgur.com/7qq0W9S.png', 'https://i.imgur.com/dgU9Ztk.png', 'https://i.imgur.com/Baujpww.png', 'https://i.imgur.com/GQxdSq1.png', 'https://i.imgur.com/dvUl1C6.png', 'https://i.imgur.com/NbA6qoW.png', 'https://i.imgur.com/A0kVnZU.png'],
             hostLink: "https://mytinerary-lorenzo.herokuapp.com/",
             githubLink: 'https://github.com/MatuMto/MyTinerary',
-            youtubeLink: '#'
+            youtubeLink: '#',
+            tecnologiesUsed:"html, css, js, react, git, github, mongo, node"
         },{
             title: 'MyTinerary Mobile App',
             description: 'MyTinerary Mobile Application  where user can create an account and navigate trough differents itineraries available in the world most touristic cities.',
             imgs: ['https://i.imgur.com/6r0LfjW.png', 'https://i.imgur.com/vbpV3md.png', 'https://i.imgur.com/VRTJ8ya.png', 'https://i.imgur.com/AK61RdC.png', 'https://i.imgur.com/2SEJdRT.png'],
             hostLink: "#",
             githubLink: 'https://github.com/MatuMto/MyTinerary-mobile',
-            youtubeLink: 'https://www.youtube.com/watch?v=Keln7ty8xC0'
+            youtubeLink: 'https://www.youtube.com/watch?v=Keln7ty8xC0',
+            tecnologiesUsed:"html, css, js, reactNative, git, github, mongo, node"
         }       
     ]
     
     const handleOpen = () => {
-        // if(proyectName ===)
         setOpen(true);
       };
     
@@ -168,11 +172,20 @@ const Proyects = () => {
                                         <Icon icon={javascriptIcon} className="proyect-tecnologyIcon"/>
                                     </div>
                                 </div>
-                                <div className="tecnology-box">
-                                    <div className="proyects-iconContainer">
-                                        <Icon icon={reactIcon} className="proyect-tecnologyIcon"/>
-                                    </div>
-                                </div>
+                                {proyect.tecnologiesUsed.includes("reactNative")
+                                    ?   <div className="tecnology-box">
+                                            {/* <div className="proyects-iconContainer"> */}
+                                                {/* <Icon icon={reactIcon} className="proyect-tecnologyIcon"/> */}
+                                                <div className="react-native-icon" style={{backgroundImage: `url('https://i.imgur.com/IxxFtuC.png')`, backgroundPosition: "center", backgroundSize: "contain", backgroundRepeat: 'no-repeat', width: '40px', height: '40px'}}></div>
+                                            {/* </div> */}
+                                        </div>
+                                    :   <div className="tecnology-box">
+                                            <div className="proyects-iconContainer">
+                                                <Icon icon={reactIcon} className="proyect-tecnologyIcon"/>
+                                            </div>
+                                        </div>
+                            
+                                }
                                 <div className="tecnology-box responsive-margin">
                                     <div className="proyects-iconContainer">
                                         <Icon icon={gitIcon} className="proyect-tecnologyIcon" />

@@ -314,6 +314,14 @@ html{
   font-size: 35px;
 }
 
+.react-native-skillIcon{
+  width: 55px;
+  height: 60px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .tecnology {
   font-family: "montserrat";
   font-size: 20px;
@@ -819,6 +827,10 @@ html{
   }
   .skillIcon {
     font-size: 30px;
+  }
+  .react-native-skillIcon{
+    width: 48px;
+    height: 53px;
   }
 }
 

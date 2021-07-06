@@ -41,9 +41,7 @@ const Skills = () => {
                     <p className="tecnology">React</p>
                 </div>
                 <div className="skillBox">
-                    <div className="iconContainer">
-                        <Icon icon={reactIcon} className="skillIcon"/>
-                    </div>
+                        <div className="react-native-skillIcon" style={{backgroundImage: `url('https://i.imgur.com/IxxFtuC.png')`}}></div>
                     <p className="tecnology">React Native</p>
                 </div>
                 <div className="skillBox">
