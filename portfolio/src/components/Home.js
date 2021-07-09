@@ -16,7 +16,7 @@ const Home = () => {
                     <h1 className="homeTitle">Mateo Lorenzo</h1>
                 </div>
                 <div className="homeText-container">
-                    <p className="homeText">I'm a very passionate and motivated Full Stack Developer with a solid Mern Stack and Agile Metodologies management. Always ready to apply what I know and learn about what I dont.</p>
+                    <p className="homeText">I'm a very passionate and motivated Full Stack Developer with a solid MERN Stack and Agile Metodologies management. Always ready to apply what I know and learn about what I dont.</p>
                 </div>
                 <div className="home-divisorLine"></div>
                 <div className="homeIcons-container">
