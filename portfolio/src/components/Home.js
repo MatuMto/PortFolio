@@ -16,15 +16,15 @@ const Home = () => {
                     <h1 className="homeTitle">Mateo Lorenzo</h1>
                 </div>
                 <div className="homeText-container">
-                    <p className="homeText">I'm a very passionate and motivated Christian Full Stack Developer with a solid Mern Stack and Agile Metodologies management. Always ready to apply what I know and learn about what I dont.</p>
+                    <p className="homeText">I'm a very passionate and motivated Full Stack Developer with a solid Mern Stack and Agile Metodologies management. Always ready to apply what I know and learn about what I dont.</p>
                 </div>
                 <div className="home-divisorLine"></div>
                 <div className="homeIcons-container">
                     <a href="https://www.linkedin.com/in/mateo-lorenzo-4518121b5/" target="_blank" rel="noreferrer">
-                        <Icon icon={linkedinIcon} className="linkedin-icon" className='homeIcon' />
+                        <Icon icon={linkedinIcon} className="linkedin-icon"/>
                     </a>
                     <a href="https://github.com/MatuMto" target="_blank" rel="noreferrer">
-                        <Icon icon={githubFill} className="github-icon" className='homeIcon' />
+                        <Icon icon={githubFill} className="github-icon"/>
                     </a>
                 </div>
             </div>

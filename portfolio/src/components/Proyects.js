@@ -92,7 +92,12 @@ const Proyects = () => {
         handleOpen()
         setOpenedMobileProyect(proyectOpened)
     }
-    
+
+    const indetifyIfTecnologyIsUsed = (tecnology, icon)=>{
+         
+    }
+
+
     return (
         <div className="proyectsContainer">
             <h3 className="proyectsTitle">PROJECTS</h3>
