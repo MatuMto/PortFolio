@@ -26,7 +26,7 @@ const AboutMe = () => {
                 }
               ></div>
               <a
-                href="https://drive.google.com/file/d/1VoqKfZjTKZRLue3tNQ6VONwDSy-pUVDz/view?usp=sharing"
+                href="https://drive.google.com/file/d/1zN5kD8A_65pbtH8VfqmPftPw_WgO9Mjd/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
                 className={
